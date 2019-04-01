@@ -1,0 +1,5 @@
+combineCards.py hzz_PTJ_LT30_cat4mu=hzz4l_4muS_13TeV_xs_bin0.txt hzz_PTJ_30_55_cat4mu=hzz4l_4muS_13TeV_xs_bin1.txt hzz_PTJ_55_95_cat4mu=hzz4l_4muS_13TeV_xs_bin2.txt hzz_PTJ_GT95_cat4mu=hzz4l_4muS_13TeV_xs_bin3.txt hzz_PTJ_LT30_cat4e=hzz4l_4eS_13TeV_xs_bin0.txt hzz_PTJ_30_55_cat4e=hzz4l_4eS_13TeV_xs_bin1.txt hzz_PTJ_55_95_cat4e=hzz4l_4eS_13TeV_xs_bin2.txt hzz_PTJ_GT95_cat4e=hzz4l_4eS_13TeV_xs_bin3.txt hzz_PTJ_LT30_cat2e2mu=hzz4l_2e2muS_13TeV_xs_bin0.txt hzz_PTJ_30_55_cat2e2mu=hzz4l_2e2muS_13TeV_xs_bin1.txt hzz_PTJ_55_95_cat2e2mu=hzz4l_2e2muS_13TeV_xs_bin2.txt hzz_PTJ_GT95_cat2e2mu=hzz4l_2e2muS_13TeV_xs_bin3.txt > hzz4l_comb_13TeV_xs.txt
+
+
+text2workspace.py hzz4l_comb_13TeV_xs.txt -P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel --PO verbose --PO 'higgsMassRange=123,127' --PO 'map=.*/smH_PTJ_LT30:r_smH_PTJ_LT30[1.0,0.0,3.0]' --PO 'map=.*/smH_PTJ_30_55:r_smH_PTJ_30_55[1.0,0.0,3.0]' --PO 'map=.*/smH_PTJ_55_95:r_smH_PTJ_55_95[1.0,0.0,3.0]' --PO 'map=.*/smH_PTJ_95_120:r_smH_PTJ_GT95[1.0,0.0,3.0]' --PO 'map=.*/smH_PTJ_120_200:r_smH_PTJ_GT95[1.0,0.0,3.0]' --PO 'map=.*/smH_PTJ_GT200:r_smH_PTJ_GT95[1.0,0.0,3.0]' 
+

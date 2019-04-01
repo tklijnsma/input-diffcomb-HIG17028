@@ -1,0 +1,2 @@
+text2workspace.py -P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel -m 125 --PO verbose --PO 'map=.*/ggH_PTH_GT600:r_ggH_PTH_GT600[1.0,0.0,10.0]' --PO 'map=.*/ggH_PTH_350_600:r_ggH_PTH_350_600[1.0,0.0,10.0]' comb_2017_ggHbb.txt -o comb_2017_ggHbb.root
+combine -M MultiDimFit -d comb_2017_ggHbb.root --minimizerTolerance 0.001 --minimizerStrategy 2 --setPhysicsModelParameterRanges r_ggH_PTH_350_600=-10,10:r_ggH_PTH_GT600=-10,10 --algo singles --robustFit 1 --minimizerAlgoForMinos Minuit2,Migrad --saveWorkspace -n Err -t -1 --toysFreq
